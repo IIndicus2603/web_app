@@ -12,6 +12,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 logger = logging.getLogger(__name__)
 
+@csrf_exempt
 def wait_and_notify(request):
     # Check for AJAX request using X-Requested-With header
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -28,6 +29,7 @@ def wait_and_notify(request):
     # If it's not an AJAX request, return a default response
     return JsonResponse({'loading': False})
 
+@csrf_exempt
 def image_upload(request):
     if request.method == 'POST' and request.FILES.get('image'):
         form = ImageForm(request.POST, request.FILES)
@@ -62,6 +64,7 @@ def image_upload(request):
     images = Image.objects.all()
     return render(request, 'images/index.html', {'form': form, 'images': images})
 
+@csrf_exempt
 def get_image_tags(request):
     if request.method == "GET":
         image_name = request.GET.get("image_name", "")
@@ -76,11 +79,13 @@ def get_image_tags(request):
             return JsonResponse({"tags": [], "error": str(e)}, status=500)
     return JsonResponse({"error": "Invalid request method"}, status=400)
 
+@csrf_exempt
 def image_slider(request):
     # Fetch images and their associated tags from the database
     images = Image.objects.all()  # Adjust according to your model
     return render(request, 'index.html', {'images': images})
 
+@csrf_exempt
 def image_check_duplicate(request):
     if request.method == 'POST':
         file_name = request.POST.get('file_name')
@@ -90,6 +95,7 @@ def image_check_duplicate(request):
         
         return JsonResponse({'exists': exists})
 
+@csrf_exempt
 def update_tag(request):
     if request.method == 'POST':
         tag_file_path = os.path.join(settings.BASE_DIR, 'tag.json')
@@ -134,6 +140,7 @@ def update_tag(request):
 
     return JsonResponse({'success': False}, status=400)
 
+@csrf_exempt
 def add_tag(request):
     if request.method == 'POST':
         image_name = request.POST.get('image_name')  # Tên ảnh
@@ -178,6 +185,7 @@ def add_tag(request):
 
     return JsonResponse({'success': False}, status=400)
 
+@csrf_exempt
 def delete_tag(request):
     if request.method == 'POST':
         image_name = request.POST.get('image_name')  # Tên ảnh
