@@ -9,6 +9,9 @@ from .forms import ImageForm
 from django.db import connections
 import logging
 from django.views.decorators.csrf import csrf_exempt
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
+
 
 logger = logging.getLogger(__name__)
 
@@ -39,7 +42,8 @@ def image_upload(request):
             image_instance = form.save(commit=False)
             # Get the file name
             file_name = os.path.basename(image_instance.image.name)
-
+            with default_storage.open(file_name, 'wb') as f:
+                f.write(image_instance.image.read())
             # Load the tag.json file
             tag_file_path = os.path.join(settings.BASE_DIR, 'tag.json')
             tags = []
