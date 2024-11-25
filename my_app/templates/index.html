@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image2Tag</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-color: #252525;
+        }
+        .carousel-inner {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            border: solid 2px #cd537c;
+            background-color:#363636;
+            z-index: 1; 
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain; /* Makes the image cover the space, cropping if necessary */
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            filter: invert(0%);
+            color:#cd537c;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;  /* Ensure the buttons are above the images */
+            
+        }
+
+        .carousel-control-prev {
+            left: 10px;
+        }
+
+        .carousel-control-next {
+            right: 10px;
+        }
+
+        /* Flex container to hold carousel and tag container */
+        .image-tag-container {
+            display: flex;
+            align-items: center; /* Vertically center content */
+            justify-content: space-between; /* Space between carousel and tags */
+        }
+
+        /* Carousel section */
+        .carousel-section {
+            width: 60%; /* Carousel takes 60% of the space */
+        }
+
+        /* Tag container section */
+        .tags-container {
+            width: 35%; /* Tag container takes 35% of the space */
+            overflow-y: auto; /* If tags exceed the height, allow scrolling */
+            padding-left: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding-top: 10px;
+            justify-content: flex-start;
+            outline: #ea185f
+        }
+
+        .tag-btn,.tag-add-btn {
+            margin: 5px;
+            font-size: 17px;
+            transition: all .2s ease-in-out;
+            border-color: #ea185f;
+            color: #a8a8a8;
+
+        }
+        
+        input[type="text"].form-control {
+            display: inline-block;
+            min-width: 50px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 17px;
+            outline: none;
+            border-color: 2px solid #cc537c;
+
+        }
+        .carousel-caption {
+            display: none !important;
+        }
+        
+        /* Add styles for file input button */
+        .upload-btn {
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        #uploadButton {
+            background-color: #ea185f;
+            border-color: #ea185f; 
+            outline: none;
+        }
+
+        #resetButton {
+            background-color: #a8a8a8; /* Change background color to red */
+            border-color: #a8a8a8;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+        #resetButton:hover {
+            background-color: #d32f2f; /* Slightly darker red on hover */
+            border-color: #d32f2f;
+        }
+
+        .tag-wrapper {
+            display: inline-flex;
+            align-items: center;
+            position: relative; /* Tạo mối quan hệ với nút delete */
+
+        }
+    
+        .tag-btn {
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
+    
+        .tag-delete-btn {
+            display: none; /* Ẩn mặc định */
+            position: absolute; /* Đặt nút vào vị trí bên cạnh */
+            right: -8px; /* Đẩy nút delete qua phải */
+            top: 5%;
+            transform: translateY(-50%);
+            z-index: 1;
+            padding: 0 5px;
+            font-size: 12px;
+            background-color: red;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .tag-btn:hover {
+            transform: scale(1.1);
+            background-color: #FFD15C; /* Changes background on hover */
+            font-family: "Arial",  Sans-serif;
+            font-weight: bold;
+            border-color: #ea185f;
+            color: #0B4A3B;
+        }
+        .tag-add-btn:hover {
+            transform: scale(1.1);
+            background-color: #FFD15C; /* Changes background on hover */
+            font-family: "Arial",  Sans-serif;
+            font-weight: bold;
+            border-color: #ea185f;
+            color: #0B4A3B;
+        }
+
+        .tag-wrapper:hover .tag-delete-btn {
+            display: inline-block; /* Hiển thị khi hover */
+        }
+
+        #fileInput {
+            display: none; /* Hide the default file input button */
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to { 
+                transform: rotate(360deg);
+            }
+        }
+         
+        
+         @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to { 
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        #loadingSpinner {
+            position: absolute;
+            top: 40%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            width: 100px;
+            height: 100px;
+            margin: 0; /* Remove any margin */
+            border: solid 10px #ea185f;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            -webkit-transition: all 0.5s ease-in;
+            -webkit-animation-name: rotate;
+            -webkit-animation-duration: 1.0s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            transition: all 0.5s ease-in;
+            animation-name: rotate;
+            animation-duration: 1.0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.2); /* Black with 50% opacity */
+            z-index: 2;
+        }
+
+        .loadingtag {
+            font-size: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800px;
+            text-align: center;
+            color: #cd537c;
+        }
+
+        .loading span {
+            margin: 0 -0.05em;
+        }
+
+        
+        .loadingtag span {
+            animation: loadingtag 1.4s infinite alternate;
+        }
+
+        .loadingtag span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .loadingtag span:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        .loadingtag span:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        .loadingtag span:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        .loadingtag span:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+        .loadingtag span:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+        .loadingtag span:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes loadingtag {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center" style="color:#ea185f;font-family: 'Copperplate',Fantasy;">Image2Tag</h2>
+
+    <!-- Flex container to hold carousel and tags -->
+    <div class="image-tag-container mt-4">
+        <!-- Carousel as drag-and-drop area -->
+        <div class="carousel-section">
+            <div id="imageSlider" class="carousel slide" data-bs-interval="false">
+                <div class="carousel-inner" id="carouselImages">
+                    {% for image in images %}
+                        <div class="carousel-item{% if forloop.first %} active{% endif %}">
+                            <img src="{{ image.image.url }}" class="d-block w-100" alt="Image">
+                        </div>
+                    {% endfor %}
+                                     <!-- Loading Spinners -->
+                    <div id="transparentOverlay"class="overlay" style="display: none;"></div>                  
+                    <div id="loadingSpinner" class="load" style="display: none;"></div>
+                </div>
+
+
+
+                <!-- Carousel buttons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+               
+
+        </div>
+    
+        <!-- Tags Container (Right Side of the Carousel) -->
+        <div class="tags-container" id="tagButtons">
+            <div id="tagLoading" class="loadingtag" style="display: none;">
+                <span>L</span>
+                <span>O</span>
+                <span>A</span>
+                <span>D</span>
+                <span>I</span>
+                <span>N</span>
+                <span>G</span>                
+            </div>
+            <!-- Tag buttons will be inserted here dynamically -->
+        </div>
+    </div>
+    
+
+    <!-- Manual Upload Button -->
+    <div class="upload-btn">
+        <button class="btn btn-primary" id="uploadButton">Tải lên ảnh</button>
+        <button id="resetButton" class="btn btn-danger">Reset</button>
+        <input type="file" id="fileInput" name="image" accept="image/*" multiple>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+    var image_tag = {};
+
+    // drag and drop file
+    $('#carouselImages').on('dragover', function(e) {
+        e.preventDefault();  // Prevent default behavior to allow dropping
+        $(this).addClass('dragover');  // Add highlight style to the carousel area
+    });
+
+    $('#carouselImages').on('dragleave', function() {
+        $(this).removeClass('dragover');  // Remove highlight when dragging out of the carousel
+    });
+
+    // Handle file drop event
+    $('#carouselImages').on('drop', function(e) {
+        e.preventDefault();  // Prevent default behavior
+        $(this).removeClass('dragover');  // Reset highlight
+
+        var files = e.originalEvent.dataTransfer.files;  // Get dropped files
+
+        if (files.length > 0) {
+            handleMultipleFiles(files);
+        }
+    });
+
+    // Allow the user to click and add an image to the carousel by triggering file input
+    $('#uploadButton').on('click', function() {
+        $('#fileInput').click();
+    });
+
+    // Handle file selection from the file input
+    $(document).on('change', '#fileInput', function() {
+        var fileInput = $(this)[0];
+        if (fileInput.files.length > 0) {
+            handleMultipleFiles(fileInput.files);
+        }
+    });
+
+    // handle multiple files
+    function handleMultipleFiles(files) {
+        for (var i = 0; i < files.length; i++) {
+            uploadImage(files[i]);
+        }
+    }
+
+
+    // upload image
+    function uploadImage(file) {
+        if (!file.type.startsWith("image/")) {
+            alert("Chỉ được phép tải lên tệp ảnh.");
+            return;
+        }
+        
+        const reader = new FileReader();
+        var tagButtonsContainer = $('#tagButtons');
+        tagButtonsContainer.find('.tag-wrapper').remove(); // Xóa các tag hiện tại
+        tagButtonsContainer.find('#addTagButton').remove(); 
+        // Show the loading spinner
+        $('.carousel-control-prev').attr('disabled', true);
+        $('.carousel-control-next').attr('disabled', true);
+        $('#transparentOverlay').show();
+        $('#tagLoading').show(); 
+        $('#loadingSpinner').show();
+        // Khi đọc file hoàn tất
+        reader.onload = function (e) {
+            const base64Image = e.target.result; // Dữ liệu Base64
+    
+            // Gửi Base64 đến server
+            $.ajax({
+                url: '/image2tag/', // Endpoint xử lý ở Django views.py
+                type: 'POST',
+                data: JSON.stringify({ 
+                    image: base64Image, // Dữ liệu Base64 của ảnh
+                    fileName: file.name // Tên tệp ảnh
+                }),
+                contentType: 'application/json',
+                success: function (response) {
+                    $('#loadingSpinner').hide();
+                    $('#transparentOverlay').hide();
+                    $('#tagLoading').hide();
+                    $('.carousel-control-prev').attr('disabled', false);
+                    $('.carousel-control-next').attr('disabled', false);
+                    console.log(file.name,'Tag list:', response.tags);
+                    image_tag[file.name] = response.tags;
+                    const activeImage = $('#carouselImages .carousel-item.active');
+        
+                    // Lấy data-filename của ảnh đang active
+                    const filename = activeImage.data('filename');
+                    
+                    if (filename && image_tag[filename]) {
+                        // Tìm danh sách tag từ dictionary image_tag
+                        const tags = image_tag[filename];
+                        
+                        // Gọi hàm renderTagButtons để hiển thị các tag
+                        renderTagButtons(tags);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Upload error:', error);
+                }
+            });
+    
+            // Tạo phần tử carousel mới và lưu tên file vào data attribute
+            const newItem = $(`
+                <div class="carousel-item" data-filename="${file.name}">
+                    <img src="${base64Image}" class="d-block w-100" alt="Uploaded Image">
+                </div>
+            `);
+    
+            // Thêm phần tử vào carousel
+            $('#carouselImages').append(newItem);
+            // Đặt ảnh mới nhất là "active"
+            $('#carouselImages .carousel-item').removeClass('active'); // Bỏ "active" khỏi ảnh cũ
+            newItem.addClass('active');
+            $('#imageSlider').carousel($('#carouselImages .carousel-item').length - 1);
+            console.log(`Image "${file.name}" upload successfully!`);
+            
+        };
+    
+        // Đọc file dưới dạng Base64
+        reader.readAsDataURL(file);
+    };
+    
+    // display tags
+    function renderTagButtons(tags) {
+        var tagButtonsContainer = $('#tagButtons');
+        tagButtonsContainer.find('.tag-wrapper').remove(); // Xóa các tag hiện tại
+        tagButtonsContainer.find('#addTagButton').remove(); // Xóa các nút hiện tại
+        
+        // Duyệt qua từng tag và tạo nút tag với nút X
+        tags.forEach(function(tag) {
+            // Tạo phần tử HTML cho tag và nút X
+            var tagButton = $(`
+                <div class="tag-wrapper d-inline-flex align-items-center">
+                    <button class="btn btn-sm btn-outline-primary tag-btn">${tag}</button>
+                    <button class="btn btn-sm btn-danger tag-delete-btn" style="margin-left: 5px;">X</button>
+                </div>
+            `);
+            
+            // Thêm vào container
+            tagButtonsContainer.append(tagButton);
+        });
+    
+        // Thêm nút "+" để thêm thẻ mới
+        tagButtonsContainer.append('<button class="btn btn-sm btn-outline-primary tag-add-btn" id="addTagButton">+</button>');
+    };
+
+    // resize input text
+    function adjustInputWidth(input) {
+        var text = input.val(); // Lấy nội dung trong ô nhập
+        var tempSpan = $('<span>').text(text).css({
+            visibility: 'hidden', // Ẩn phần tử tạm
+            position: 'absolute', // Đảm bảo không chiếm chỗ
+            fontSize: input.css('font-size'), // Áp dụng font giống ô nhập
+            fontFamily: input.css('font-family'),
+            fontWeight: input.css('font-weight'),
+            whiteSpace: 'pre' // Đảm bảo khoảng trắng được hiển thị chính xác
+        });
+
+        $('body').append(tempSpan); // Thêm vào DOM để đo chiều rộng
+        var width = tempSpan.width(); // Đo chiều rộng
+        tempSpan.remove(); // Xóa phần tử tạm
+        input.width(Math.max(width + 20, 50)); // Áp dụng chiều rộng (cộng thêm một chút padding nếu cần)
+    };
+
+    // tag button
+    $(document).on('click', '.tag-btn', function () {
+        var currentButton = $(this); // Nút tag hiện tại
+        var currentText = currentButton.text(); // Lấy nội dung hiện tại của nút tag
+    
+        // Tạo một ô nhập thay thế nút tag
+        var input = $('<input type="text" class="form-control form-control-sm" value="' + currentText + '">');
+        input.css({ width: currentButton.width() + 20 + 'px' }); // Giữ kích thước tương tự nút
+        currentButton.replaceWith(input);
+        adjustInputWidth(input); // Thay thế nút tag bằng ô nhập
+        input.focus(); // Đưa con trỏ vào ô nhập
+    
+        input.on('input', function() {
+            adjustInputWidth($(this));
+        });
+        // Khi nhấn Enter
+        input.on('keypress', function (e) {
+            if (e.which === 13) { // Keycode 13 là Enter
+                var newText = input.val().trim(); // Lấy nội dung mới
+    
+                if (newText === '') {
+                    revertToButton(); // Quay lại trạng thái nút
+                } else if (newText === currentText) {
+                    revertToButton(); // Không thay đổi, quay lại nút ban đầu
+                } else if (isTagDuplicate(newText)) {
+                    alert('Tag already exist!');
+                    revertToButton(); // Tag đã tồn tại, không thay đổi
+                } else {
+                    // Cập nhật tag
+                    updateTag(currentText, newText);
+                    revertToButton(newText); // Thay bằng tag mới
+                    console.log('Edit tag successfully!');
+                }
+            }
+        });
+    
+        // Khi mất focus
+        input.on('blur', function () {
+            revertToButton(); // Quay lại trạng thái nút tag cũ
+        });
+    
+        // Hàm kiểm tra tag trùng lặp
+        function isTagDuplicate(newTag) {
+            return $('#tagButtons .tag-btn').toArray().some(function (btn) {
+                return $(btn).text() === newTag;
+            });
+        }
+    
+        // Hàm cập nhật tag trong image_tag
+        function updateTag(oldTag, newTag) {
+            const activeImage = $('#carouselImages .carousel-item.active');
+            const filename = activeImage.data('filename');
+            if (filename && image_tag[filename]) {
+                // Tìm và thay thế tag
+                const tags = image_tag[filename];
+                const tagIndex = tags.indexOf(oldTag);
+                if (tagIndex !== -1) {
+                    tags[tagIndex] = newTag; // Thay thế tag cũ bằng tag mới
+                }
+            }
+        }
+    
+        // Hàm quay lại trạng thái nút
+        function revertToButton(newText = currentText) {
+            const newButton = $('<button class="btn btn-sm btn-outline-primary tag-btn"></button>').text(newText);
+            input.replaceWith(newButton); // Thay thế ô nhập bằng nút tag
+        }
+    });
+
+
+    // add tag button
+    $(document).on('click', '#addTagButton', function () {
+        var addButton = $(this); // Nút "Add Tag"
+        var tagButtonsContainer = $('#tagButtons');
+        // Tạo một ô nhập để viết tag mới
+        var input = $('<input type="text" class="form-control form-control-sm" placeholder="New Tag">');
+        input.css({ width: addButton.width() + 20 + 'px' }); // Giữ kích thước tương tự nút
+        addButton.replaceWith(input); // Thay thế nút bằng ô nhập
+        adjustInputWidth(input); // Thay thế nút tag bằng ô nhập
+        input.focus(); // Đưa con trỏ vào ô nhập
+    
+        input.on('input', function() {
+            adjustInputWidth($(this));
+        });
+        
+        // Khi nhấn Enter
+        input.on('keypress', function (e) {
+            if (e.which === 13) { // Keycode 13 là Enter
+                var newText = input.val().trim(); // Lấy nội dung tag mới
+    
+                if (newText === '') {
+                    revertToButton(); // Quay lại nút ban đầu
+                } else if (isTagDuplicate(newText)) {
+                    alert('Tag already exist!');
+                    revertToButton(); // Tag trùng lặp, không thêm
+                } else {
+                    // Thêm tag mới vào danh sách tag của ảnh
+                    addNewTag(newText);
+                    var newTagButton = $(`
+                    <div class="tag-wrapper d-inline-flex align-items-center">
+                        <button class="btn btn-sm btn-outline-primary tag-btn">${newText}</button>
+                        <button class="btn btn-sm btn-danger tag-delete-btn" style="margin-left: 5px;">X</button>
+                    </div>
+                    `); 
+                    input.replaceWith(newTagButton);
+                    tagButtonsContainer.append('<button class="btn btn-sm btn-outline-primary tag-add-btn" id="addTagButton">+</button>');
+                    console.log('Tag added successfully!');
+            }}
+        });
+    
+        // Khi mất focus
+        input.on('blur', function () {
+            revertToButton(); // Quay lại nút ban đầu
+        });
+    
+        // Hàm kiểm tra tag trùng lặp
+        function isTagDuplicate(newTag) {
+            return $('#tagButtons .tag-btn').toArray().some(function (btn) {
+                return $(btn).text() === newTag;
+            });
+        }
+    
+        // Hàm thêm tag mới vào danh sách tag của ảnh
+        function addNewTag(newTag) {
+            const activeImage = $('#carouselImages .carousel-item.active');
+            const filename = activeImage.data('filename');
+            if (filename) {
+                // Nếu ảnh có dữ liệu tags trong object `image_tag`
+                if (!image_tag[filename]) {
+                    image_tag[filename] = []; // Khởi tạo mảng tag nếu chưa có
+                }
+                image_tag[filename].push(newTag); // Thêm tag mới vào danh sách
+            }
+        }
+    
+        // Hàm quay lại nút "Add Tag" ban đầu
+        function revertToButton() {
+            const addButton = $('<button class="btn btn-sm btn-outline-primary tag-add-btn" id="addTagButton">+</button>');
+            input.replaceWith(addButton); // Thay thế ô nhập bằng nút
+        }
+
+    });
+    
+    // delete tag button
+    $(document).on('click', '.tag-delete-btn', function () {
+        var deleteButton = $(this); // Nút "X" được nhấn
+        var tagWrapper = deleteButton.closest('.tag-wrapper'); // Bao gồm cả nút tag và nút "X"
+        var tagText = tagWrapper.find('.tag-btn').text(); // Lấy nội dung của tag
+        var activeImage = $('#carouselImages .carousel-item.active'); // Lấy ảnh hiện tại
+        var filename = activeImage.data('filename'); // Lấy tên file của ảnh
+    
+        // Kiểm tra nếu có filename và tag trong danh sách image_tag
+        if (filename && image_tag[filename]) {
+            // Tìm vị trí của tag trong mảng tags
+            var tagIndex = image_tag[filename].indexOf(tagText);
+    
+            if (tagIndex > -1) {
+                // Xóa tag khỏi mảng
+                image_tag[filename].splice(tagIndex, 1);
+    
+                // Xóa phần tử tag khỏi giao diện
+                tagWrapper.remove();
+            console.log(`Tag "${tagText}" deleted successfully.`);
+            }
+        }
+    });
+    
+    
+    // redisplay tags when change image
+    $('#imageSlider').on('slid.bs.carousel', function () {
+        // Tìm ảnh đang active
+        const activeImage = $('#carouselImages .carousel-item.active');
+        
+        // Lấy data-filename của ảnh đang active
+        const filename = activeImage.data('filename');
+        
+        if (filename && image_tag[filename]) {
+            // Tìm danh sách tag từ dictionary image_tag
+            const tags = image_tag[filename];
+            
+            // Gọi hàm renderTagButtons để hiển thị các tag
+            renderTagButtons(tags);
+        } else {
+            // Nếu không tìm thấy tags, hiển thị thông báo hoặc xóa hết tag
+            renderTagButtons([]);
+        }
+    });
+
+
+    // delete all button
+    $(document).ready(function() {
+        // Attach a click event to the reset button
+        $('#resetButton').on('click', function() {
+            // Optional: Show a confirmation message or handle other logic
+            alert('Deleting all data');
+            location.reload();            
+        });
+    });
+</script>
+
+</body>
+</html>
