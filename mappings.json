@@ -1,0 +1,2482 @@
+{
+ "Sneakers": [
+  "Shoes",
+  "Sportswear",
+  "Footwear",
+  "Trainers",
+  "Running Shoes",
+  "Athletic",
+  "Comfortable",
+  "Casual Wear"
+ ],
+ "Chair": [
+  "Furniture",
+  "Seat",
+  "Sitting",
+  "Cushioned",
+  "Ergonomic"
+ ],
+ "Other Shoes": [
+  "Footwear",
+  "Casual",
+  "Walking",
+  "Running"
+ ],
+ "Hat": [
+  "Headwear",
+  "Headgear",
+  "Cap",
+  "Fashion Accessory",
+  "Protection"
+ ],
+ "Car": [
+  "Vehicle",
+  "Automobile",
+  "Transportation",
+  "Driving",
+  "Motorized",
+  "Wheels",
+  "Roads"
+ ],
+ "Lamp": [
+  "Lighting",
+  "Bulb",
+  "Illumination",
+  "Light Source",
+  "Decoration",
+  "Decor"
+ ],
+ "Glasses": [
+  "Eyewear",
+  "Spectacles",
+  "Vision",
+  "Frames",
+  "Optical",
+  "Lenses",
+  "Fashion Accessory",
+  "Fashion",
+  "Accessory"
+ ],
+ "Bottle": [
+  "Container",
+  "Holding",
+  "Reusable",
+  "Hydration",
+  "Drinkware",
+  "Drinks",
+  "Vial"
+ ],
+ "Desk": [
+  "Furniture",
+  "Workstation",
+  "Table",
+  "Office",
+  "Study",
+  "Workspace",
+  "Writing Surface",
+  "Compact"
+ ],
+ "Cup": [
+  "Drinkware",
+  "Mug",
+  "Serving",
+  "Drink holder",
+  "Container"
+ ],
+ "Cabinet/shelf": [
+  "Furniture",
+  "Storage",
+  "Cupboard",
+  "Organization",
+  "Display"
+ ],
+ "Handbag/Satchel": [
+  "Bag",
+  "Leather",
+  "Accessory",
+  "Carrying",
+  "Fashion",
+  "Portable",
+  "Carriage"
+ ],
+ "Bracelet": [
+  "Jewelry",
+  "Wristwear",
+  "Armwear",
+  "Bangle",
+  "Accessory",
+  "Ornament",
+  "Decorative"
+ ],
+ "Plate": [
+  "Dishware",
+  "Dish",
+  "Dining",
+  "Serving",
+  "Kitchenware",
+  "Flatware",
+  "Display"
+ ],
+ "Picture/Frame": [
+  "Wall Decor",
+  "Display",
+  "Photography",
+  "Artwork",
+  "Photos",
+  "Decorative",
+  "Decor",
+  "Memory"
+ ],
+ "Helmet": [
+  "Protection",
+  "Defense",
+  "Headwear",
+  "Headgear",
+  "Safety",
+  "Hard Hat",
+  "Sports",
+  "Durable"
+ ],
+ "Book": [
+  "Literature",
+  "Reading",
+  "Knowledge",
+  "Library",
+  "Education",
+  "Teaching",
+  "Learning",
+  "Information"
+ ],
+ "Gloves": [
+  "Clothing",
+  "Handwear",
+  "Protective",
+  "Fashion",
+  "Insulated",
+  "Practical"
+ ],
+ "Storage box": [
+  "Container",
+  "Organization",
+  "Storage Solution",
+  "Storage",
+  "Box",
+  "Household",
+  "Practical"
+ ],
+ "Leather Shoes": [
+  "Footwear",
+  "Formal Shoes",
+  "Casual Shoes",
+  "Durable",
+  "Stylish",
+  "Fashion",
+  "Dress Shoes",
+  "Lace-up",
+  "Shoes",
+  "Quality Material"
+ ],
+ "Flower": [
+  "Floral",
+  "Bloom",
+  "Plant",
+  "Decorative",
+  "Nature",
+  "Bouquet"
+ ],
+ "Potted Plant": [
+  "Indoor Plant",
+  "Potted",
+  "Decorative",
+  "Greenery",
+  "Houseplant",
+  "Contained Plant",
+  "Plant",
+  "Garden"
+ ],
+ "Bowl/Basin": [
+  "Dishware",
+  "Kitchenware",
+  "Serving",
+  "Mixing",
+  "Container",
+  "Round",
+  "Practical",
+  "Dining"
+ ],
+ "Flag": [
+  "Banner",
+  "Symbol",
+  "Decorative",
+  "Fabric",
+  "Representation",
+  "Presentation"
+ ],
+ "Pillow": [
+  "Bedding",
+  "Cushion",
+  "Comfort",
+  "Soft",
+  "Sleep",
+  "Decorative",
+  "Decor",
+  "Support",
+  "Rest"
+ ],
+ "Boots": [
+  "Footwear",
+  "Durable",
+  "Fashionable",
+  "Casual",
+  "Comfortable",
+  "Formal",
+  "Clothing"
+ ],
+ "Vase": [
+  "Decorative",
+  "Decor",
+  "Container",
+  "Holding",
+  "Display",
+  "Home Decor",
+  "Ornamental"
+ ],
+ "Microphone": [
+  "Audio",
+  "Recording",
+  "Music",
+  "Broadcast",
+  "Podcast",
+  "Speech",
+  "Technology",
+  "Tech",
+  "Sound"
+ ],
+ "Necklace": [
+  "Jewelry",
+  "Accessory",
+  "Chain",
+  "Pendant",
+  "Gold",
+  "Silver",
+  "Decorative",
+  "Fashion"
+ ],
+ "Ring": [
+  "Jewelry",
+  "Fingerwear",
+  "Ornamental",
+  "Engagement",
+  "Decorative",
+  "Fashion"
+ ],
+ "Wine Glass": [
+  "Drinkware",
+  "Stemware",
+  "Beverage",
+  "Wine",
+  "Dining",
+  "Elegant",
+  "Transparent",
+  "Drinking"
+ ],
+ "Belt": [
+  "Accessory",
+  "Clothing",
+  "Waistwear",
+  "Fashion",
+  "Durable",
+  "Casual",
+  "Formal"
+ ],
+ "Backpack": [
+  "Bag",
+  "Bundle",
+  "Rucksack",
+  "Travel",
+  "Portable",
+  "Storage",
+  "Carrying",
+  "Durable",
+  "Accessory"
+ ],
+ "Umbrella": [
+  "Rain",
+  "Sunshade",
+  "Canopy",
+  "Portable",
+  "Waterproof",
+  "Weather",
+  "Protection",
+  "Foldable"
+ ],
+ "Speaker": [
+  "Audio",
+  "Sound",
+  "Music",
+  "Technology",
+  "Home Audio",
+  "Portable",
+  "Stereo",
+  "Mono"
+ ],
+ "Watch": [
+  "Timepiece",
+  "Accessory",
+  "Wristwatch",
+  "Wristwear",
+  "Fashion",
+  "Jewelry",
+  "Portable",
+  "Time"
+ ],
+ "Tie": [
+  "Neckwear",
+  "Accessory",
+  "Formal",
+  "Fashion",
+  "Clothing",
+  "Business",
+  "Elegant"
+ ],
+ "Trash bin Can": [
+  "Garbage",
+  "Trashcan",
+  "Waste",
+  "Container",
+  "Bin",
+  "Recycling",
+  "Household",
+  "Trash"
+ ],
+ "Slippers": [
+  "Footwear",
+  "Indoor",
+  "Flippers",
+  "Flip Flops",
+  "Comfortable",
+  "Casual",
+  "House Shoes",
+  "Soft",
+  "Relaxing",
+  "Slip-on"
+ ],
+ "Bicycle": [
+  "Vehicle",
+  "Bike",
+  "Cycling",
+  "Two-wheeler",
+  "Transportation",
+  "Outdoor",
+  "Fitness",
+  "Exercise"
+ ],
+ "Stool": [
+  "Furniture",
+  "Seat",
+  "Sitting",
+  "Wooden",
+  "Compact",
+  "Portable",
+  "Simple",
+  "Functional"
+ ],
+ "Barrel/bucket": [
+  "Container",
+  "Storage",
+  "Durable",
+  "Liquid",
+  "Portable",
+  "Water"
+ ],
+ "Van": [
+  "Vehicle",
+  "Automobile",
+  "Transport",
+  "Delivery",
+  "Moving",
+  "Utility"
+ ],
+ "Couch": [
+  "Furniture",
+  "Sofa",
+  "Seating",
+  "Sitting",
+  "Living Room",
+  "Comfortable",
+  "Lounge"
+ ],
+ "Sandals": [
+  "Footwear",
+  "Beachwear",
+  "Casual",
+  "Comfortable",
+  "Flat"
+ ],
+ "Basket": [
+  "Container",
+  "Storage",
+  "Carriage",
+  "Shopping Basket",
+  "Portable",
+  "Decorative",
+  "Functional",
+  "Woven"
+ ],
+ "Drum": [
+  "Instrument",
+  "Percussion",
+  "Music",
+  "Drum Set",
+  "Rhythm",
+  "Snare",
+  "Bass Drum"
+ ],
+ "Pen/Pencil": [
+  "Writing Instrument",
+  "Writing",
+  "Office",
+  "Drawing",
+  "Sketching",
+  "Tool"
+ ],
+ "Bus": [
+  "Vehicle",
+  "Transport",
+  "Coach",
+  "Passenger",
+  "Commuting",
+  "Travel"
+ ],
+ "High Heels": [
+  "Footwear",
+  "Fashion",
+  "Women Shoes",
+  "Formal",
+  "Stylish",
+  "Pointed",
+  "Elegant"
+ ],
+ "Guitar": [
+  "Instrument",
+  "Music",
+  "String Instrument",
+  "Acoustic",
+  "Playing",
+  "Sound",
+  "Melody"
+ ],
+ "Carpet": [
+  "Flooring",
+  "Rug",
+  "Decorative",
+  "Soft",
+  "Home Decor",
+  "Textile",
+  "Comfort",
+  "Patterned"
+ ],
+ "Cell Phone": [
+  "Device",
+  "Mobile",
+  "Communication",
+  "Portable",
+  "Technology",
+  "Screen",
+  "Call",
+  "Contact"
+ ],
+ "Bread": [
+  "Food",
+  "Baking",
+  "Loaf",
+  "Slice",
+  "Eating",
+  "Dining",
+  "Wheat",
+  "Toast",
+  "Fresh"
+ ],
+ "Camera": [
+  "Device",
+  "Photos",
+  "Photography",
+  "Lens",
+  "Digital",
+  "Pictures",
+  "Filming",
+  "Capture"
+ ],
+ "Canned": [
+  "Food",
+  "Preserved",
+  "Container",
+  "Metal",
+  "Storage",
+  "Groceries",
+  "Non-perishable",
+  "Sealed"
+ ],
+ "Traffic cone": [
+  "Safety",
+  "Road",
+  "Construction",
+  "Orange Cone",
+  "Warning",
+  "Plastic",
+  "Marker",
+  "Visible"
+ ],
+ "Cymbal": [
+  "Instrument",
+  "Percussion",
+  "Music",
+  "Metal",
+  "Crash Cymbal",
+  "Sound",
+  "Rhythm"
+ ],
+ "Lifesaver": [
+  "Safety",
+  "Floater",
+  "Water",
+  "Emergency",
+  "Rescue",
+  "Pool",
+  "Round",
+  "Portable"
+ ],
+ "Towel": [
+  "Cloth",
+  "Drying",
+  "Bathroom",
+  "Soft",
+  "Absorbent",
+  "Beach",
+  "Household",
+  "Fabric"
+ ],
+ "Stuffed Toy": [
+  "Toy",
+  "Plushie",
+  "Soft Toy",
+  "Childhood",
+  "Comfort",
+  "Gift",
+  "Cute"
+ ],
+ "Candle": [
+  "Light",
+  "Wax",
+  "Decorative",
+  "Scented",
+  "Romantic",
+  "Flame",
+  "Holder",
+  "Home Decor"
+ ],
+ "Laptop": [
+  "Device",
+  "Computer",
+  "Portable",
+  "Technology",
+  "Work",
+  "Screen"
+ ],
+ "Bed": [
+  "Furniture",
+  "Sleeping",
+  "Mattress",
+  "Bedding",
+  "Comfort",
+  "Pillow",
+  "Bedroom"
+ ],
+ "Faucet": [
+  "Tap",
+  "Water",
+  "Kitchen",
+  "Bathroom",
+  "Metal",
+  "Fixture"
+ ],
+ "Tent": [
+  "Camping",
+  "Shelter",
+  "Portable",
+  "Outdoor",
+  "Hiking",
+  "Poles",
+  "Recreational"
+ ],
+ "Mirror": [
+  "Reflective",
+  "Glass",
+  "Home Decor",
+  "Frame",
+  "Vanity",
+  "Household"
+ ],
+ "Power outlet": [
+  "Electricity",
+  "Socket",
+  "Plug",
+  "Energy",
+  "Adapter",
+  "Home",
+  "Device",
+  "Power"
+ ],
+ "Sink": [
+  "Kitchen",
+  "Bathroom",
+  "Wash Basin",
+  "Washing",
+  "Water",
+  "Fixture",
+  "Cleaning"
+ ],
+ "Apple": [
+  "Fruit",
+  "Food",
+  "Healthy",
+  "Snack",
+  "Juicy",
+  "Natural"
+ ],
+ "Air Conditioner": [
+  "Appliance",
+  "Cooling",
+  "AC",
+  "Temperature Control",
+  "Electric",
+  "Home",
+  "Comfort"
+ ],
+ "Knife": [
+  "Tool",
+  "Kitchen",
+  "Cutting",
+  "Sharp",
+  "Blade",
+  "Cooking",
+  "Utensil",
+  "Stainless Steel"
+ ],
+ "Fork": [
+  "Utensil",
+  "Dining",
+  "Tableware",
+  "Kitchen",
+  "Eating",
+  "Food",
+  "Serving"
+ ],
+ "Balloon": [
+  "Party",
+  "Decoration",
+  "Inflatable",
+  "Colorful",
+  "Rubber",
+  "Toy",
+  "Celebration",
+  "Party"
+ ],
+ "Tripod": [
+  "Photography",
+  "Camera Stand",
+  "Stability",
+  "Portable",
+  "Equipment",
+  "Adjustable",
+  "Professional"
+ ],
+ "Spoon": [
+  "Utensil",
+  "Dining",
+  "Tableware",
+  "Kitchen",
+  "Serving",
+  "Eating",
+  "Cooking"
+ ],
+ "Clock": [
+  "Time",
+  "Watch",
+  "Home",
+  "Decorative",
+  "Ticking"
+ ],
+ "Pot": [
+  "Kitchenware",
+  "Cooking",
+  "Container",
+  "Handle"
+ ],
+ "Cake": [
+  "Dessert",
+  "Baking",
+  "Sweet",
+  "Celebration",
+  "Party",
+  "Food",
+  "Icing",
+  "Layers"
+ ],
+ "Hanger": [
+  "Clothing",
+  "Wardrobe",
+  "Storage",
+  "Hook",
+  "Organizing",
+  "Hanging"
+ ],
+ "Blackboard/Whiteboard": [
+  "Teaching",
+  "School",
+  "Classroom",
+  "Writing",
+  "Display",
+  "Education",
+  "Board"
+ ],
+ "Napkin": [
+  "Dining",
+  "Cloth",
+  "Paper",
+  "Tableware",
+  "Hygiene",
+  "Absorbent",
+  "Tissue"
+ ],
+ "Orange/Tangerine": [
+  "Fruit",
+  "Citrus",
+  "Food",
+  "Vitamin C",
+  "Healthy",
+  "Juicy",
+  "Peel",
+  "Snack"
+ ],
+ "Toiletry": [
+  "Personal Care",
+  "Hygiene",
+  "Bathroom",
+  "Essentials",
+  "Travel"
+ ],
+ "Keyboard": [
+  "Device",
+  "Computer",
+  "Typing",
+  "Keys",
+  "Mechanical",
+  "Portable",
+  "Technology"
+ ],
+ "Tomato": [
+  "Fruit",
+  "Vegetable",
+  "Food",
+  "Cooking",
+  "Red",
+  "Juicy",
+  "Healthy",
+  "Salad"
+ ],
+ "Lantern": [
+  "Lighting",
+  "Portable",
+  "Outdoor",
+  "Camping",
+  "Lamp",
+  "Bright",
+  "Light Source"
+ ],
+ "Fan": [
+  "Appliance",
+  "Cooling",
+  "Airflow",
+  "Electric",
+  "Portable",
+  "Home",
+  "Comfort"
+ ],
+ "Green Vegetables": [
+  "Food",
+  "Healthy",
+  "Leafy",
+  "Salad",
+  "Cooking",
+  "Fresh",
+  "Natural",
+  "Nutrition",
+  "Green"
+ ],
+ "Pumpkin": [
+  "Vegetable",
+  "Food",
+  "Orange",
+  "Cooking",
+  "Halloween",
+  "Natural"
+ ],
+ "Soccerball": [
+  "Sports",
+  "Ball",
+  "Soccer",
+  "Football",
+  "Game",
+  "Play",
+  "Outdoor",
+  "Recreational"
+ ],
+ "Luggage": [
+  "Travel",
+  "Bag",
+  "Suitcase",
+  "Storage",
+  "Portable",
+  "Wheels",
+  "Durable",
+  "Packing"
+ ],
+ "Tea pot": [
+  "Kitchenware",
+  "Tea",
+  "Ceramic",
+  "Pouring",
+  "Handle",
+  "Spout",
+  "Brewing"
+ ],
+ "Telephone": [
+  "Communication",
+  "Device",
+  "Phone",
+  "Call",
+  "Contact",
+  "Technology",
+  "Ringing"
+ ],
+ "Trolley": [
+  "Cart",
+  "Shopping",
+  "Portable",
+  "Wheels",
+  "Storage",
+  "Luggage",
+  "Pushing",
+  "Convenience"
+ ],
+ "Head Phone": [
+  "Audio",
+  "Sound",
+  "Music",
+  "Device",
+  "Listening",
+  "Portable"
+ ],
+ "Dessert": [
+  "Food",
+  "Sweet",
+  "Delicious",
+  "Appetizer"
+ ],
+ "Scooter": [
+  "Vehicle",
+  "Transport",
+  "Electric",
+  "Manual",
+  "Portable",
+  "Outdoor",
+  "Recreational",
+  "Wheels",
+  "Moving"
+ ],
+ "Remote": [
+  "Device",
+  "Control",
+  "TV",
+  "Appliance",
+  "Wireless",
+  "Buttons",
+  "Technology",
+  "Convenient",
+  "Battery"
+ ],
+ "Refrigerator": [
+  "Appliance",
+  "Kitchen",
+  "Cooling",
+  "Food Storage",
+  "Freezer",
+  "Electric",
+  "Household",
+  "Durable"
+ ],
+ "Oven": [
+  "Appliance",
+  "Kitchen",
+  "Cooking",
+  "Baking",
+  "Electric",
+  "Heat",
+  "Food",
+  "Stove"
+ ],
+ "Lemon": [
+  "Fruit",
+  "Citrus",
+  "Food",
+  "Sour",
+  "Juice",
+  "Vitamin C",
+  "Healthy"
+ ],
+ "Baseball Bat": [
+  "Sports",
+  "Equipment",
+  "Baseball",
+  "Game",
+  "Swing",
+  "Outdoor"
+ ],
+ "Surveillance Camera": [
+  "Security",
+  "Device",
+  "Recording",
+  "Monitoring",
+  "Home",
+  "Technology",
+  "Video",
+  "Safety"
+ ],
+ "Jug": [
+  "Container",
+  "Pitcher",
+  "Liquid",
+  "Pouring",
+  "Water",
+  "Kitchenware",
+  "Handle"
+ ],
+ "Broccoli": [
+  "Vegetable",
+  "Food",
+  "Green",
+  "Cooking",
+  "Healthy",
+  "Nutrition",
+  "Fresh",
+  "Natural"
+ ],
+ "Piano": [
+  "Instrument",
+  "Music",
+  "Keyboard",
+  "Playing",
+  "Grand Piano",
+  "Sound",
+  "Melody",
+  "Classical"
+ ],
+ "Pizza": [
+  "Food",
+  "Cheese",
+  "Crust",
+  "Toppings",
+  "Baking",
+  "Delicious",
+  "Eating",
+  "Dining"
+ ],
+ "Skateboard": [
+  "Sports",
+  "Outdoor",
+  "Wheels",
+  "Board",
+  "Recreational",
+  "Tricks",
+  "Riding",
+  "Portable"
+ ],
+ "Surfboard": [
+  "Sports",
+  "Water",
+  "Board",
+  "Waves",
+  "Recreational",
+  "Beach",
+  "Riding",
+  "Portable"
+ ],
+ "Gas stove": [
+  "Appliance",
+  "Kitchen",
+  "Cooking",
+  "Heat",
+  "Burner",
+  "Fire",
+  "Gas",
+  "Food",
+  "Stove"
+ ],
+ "Donut": [
+  "Food",
+  "Dessert",
+  "Sweet",
+  "Pastry",
+  "Fried",
+  "Sugar",
+  "Ring",
+  "Delicious"
+ ],
+ "Bow Tie": [
+  "Accessory",
+  "Clothing",
+  "Formal",
+  "Fashion",
+  "Neckwear",
+  "Stylish",
+  "Elegant",
+  "Silk"
+ ],
+ "Carrot": [
+  "Vegetable",
+  "Food",
+  "Orange",
+  "Healthy",
+  "Cooking",
+  "Raw",
+  "Snack",
+  "Natural"
+ ],
+ "Toilet": [
+  "Bathroom",
+  "Sanitation",
+  "Fixture",
+  "Cleaning",
+  "Porcelain",
+  "Water",
+  "Essential"
+ ],
+ "Kite": [
+  "Toy",
+  "Outdoor",
+  "Flying",
+  "Wind",
+  "String",
+  "Recreational",
+  "Colorful",
+  "Paper"
+ ],
+ "Strawberry": [
+  "Fruit",
+  "Food",
+  "Sweet",
+  "Red",
+  "Juicy",
+  "Healthy",
+  "Snack",
+  "Natural"
+ ],
+ "Shovel": [
+  "Tool",
+  "Gardening",
+  "Digging",
+  "Metal",
+  "Handle",
+  "Construction",
+  "Soil",
+  "Work"
+ ],
+ "Pepper": [
+  "Vegetable",
+  "Spice",
+  "Food",
+  "Cooking",
+  "Seasoning",
+  "Hot"
+ ],
+ "Computer Box": [
+  "Device",
+  "Electronics",
+  "Hardware",
+  "PC Case",
+  "Storage",
+  "Components",
+  "Technology",
+  "Desktop"
+ ],
+ "Toilet Paper": [
+  "Hygiene",
+  "Bathroom",
+  "Tissue",
+  "Roll",
+  "Soft",
+  "Disposable",
+  "Essential",
+  "Sanitation"
+ ],
+ "Chopsticks": [
+  "Utensil",
+  "Dining",
+  "Eating",
+  "Food",
+  "Cooking"
+ ],
+ "Microwave": [
+  "Appliance",
+  "Kitchen",
+  "Cooking",
+  "Heating",
+  "Food",
+  "Electric",
+  "Compact"
+ ],
+ "Baseball": [
+  "Sports",
+  "Ball",
+  "Game",
+  "Outdoor",
+  "Equipment",
+  "Recreational"
+ ],
+ "Cutting/chopping Board": [
+  "Kitchenware",
+  "Cooking",
+  "Food Prep",
+  "Utensil",
+  "Durable"
+ ],
+ "Scissors": [
+  "Tool",
+  "Cutting",
+  "Office",
+  "Sharp",
+  "Metal",
+  "Handle",
+  "Crafts",
+  "Stationery"
+ ],
+ "Marker": [
+  "Stationery",
+  "Writing",
+  "Drawing",
+  "Permanent",
+  "Ink",
+  "Colors",
+  "Art",
+  "Office"
+ ],
+ "Pie": [
+  "Food",
+  "Dessert",
+  "Baking",
+  "Sweet",
+  "Fruit",
+  "Delicious"
+ ],
+ "Ladder": [
+  "Tool",
+  "Climbing",
+  "Steps",
+  "Height",
+  "Portable",
+  "Construction"
+ ],
+ "Cookies": [
+  "Food",
+  "Dessert",
+  "Baking",
+  "Sweet",
+  "Snack",
+  "Homemade",
+  "Delicious"
+ ],
+ "Basketball": [
+  "Sports",
+  "Ball",
+  "Game",
+  "Outdoor",
+  "Team",
+  "Court",
+  "Recreational"
+ ],
+ "Grape": [
+  "Fruit",
+  "Food",
+  "Juicy",
+  "Healthy",
+  "Snack",
+  "Natural"
+ ],
+ "Potato": [
+  "Vegetable",
+  "Food",
+  "Cooking",
+  "Frying",
+  "Baking",
+  "Starch",
+  "Snack",
+  "Versatile"
+ ],
+ "Sausage": [
+  "Food",
+  "Meat",
+  "Grilling",
+  "Cooking",
+  "Snack",
+  "Breakfast",
+  "Delicious"
+ ],
+ "Tricycle": [
+  "Vehicle",
+  "Children",
+  "Three Wheels",
+  "Riding",
+  "Toy",
+  "Outdoor",
+  "Pedals",
+  "Recreational"
+ ],
+ "Violin": [
+  "Instrument",
+  "Music",
+  "Strings",
+  "Playing",
+  "Bow",
+  "Classical",
+  "Melody",
+  "Acoustic"
+ ],
+ "Egg": [
+  "Food",
+  "Protein",
+  "Cooking",
+  "Boiling",
+  "Baking",
+  "Omelette",
+  "Natural"
+ ],
+ "Candy": [
+  "Food",
+  "Sweet",
+  "Snack",
+  "Sugar",
+  "Treat",
+  "Colorful",
+  "Chewy"
+ ],
+ "Wheelchair": [
+  "Mobility",
+  "Assistance",
+  "Health",
+  "Device",
+  "Portable",
+  "Wheels",
+  "Comfortable",
+  "Accessible"
+ ],
+ "Golf Club": [
+  "Sports",
+  "Golf",
+  "Equipment",
+  "Swing",
+  "Outdoor",
+  "Recreational"
+ ],
+ "Briefcase": [
+  "Accessory",
+  "Office",
+  "Bag",
+  "Luggage",
+  "Portable",
+  "Storage",
+  "Professional",
+  "Business"
+ ],
+ "Cucumber": [
+  "Vegetable",
+  "Food",
+  "Green",
+  "Fresh",
+  "Healthy",
+  "Cooking",
+  "Salad",
+  "Natural"
+ ],
+ "Cigar/Cigarette": [
+  "Tobacco",
+  "Smoking",
+  "Roll",
+  "Nicotine",
+  "Recreational",
+  "Addictive",
+  "Inhalation"
+ ],
+ "Paint Brush": [
+  "Tool",
+  "Painting",
+  "Art",
+  "Crafts",
+  "Handle",
+  "Color",
+  "Creative"
+ ],
+ "Pear": [
+  "Fruit",
+  "Food",
+  "Sweet",
+  "Juicy",
+  "Healthy",
+  "Snack",
+  "Natural"
+ ],
+ "Hamburger": [
+  "Food",
+  "Fast Food",
+  "Quick Meal",
+  "Meat",
+  "Cheese",
+  "Bun",
+  "Lunch",
+  "Delicious"
+ ],
+ "Extractor": [
+  "Tool",
+  "Appliance",
+  "Air",
+  "Ventilation",
+  "Kitchen",
+  "Filter",
+  "Cooking",
+  "Exhaust"
+ ],
+ "Extension Cord": [
+  "Electrical",
+  "Power",
+  "Cable",
+  "Portable",
+  "Home",
+  "Device"
+ ],
+ "Tong": [
+  "Tool",
+  "Kitchen",
+  "Gripping",
+  "Cooking",
+  "Serving",
+  "Metal",
+  "Handle",
+  "Utensil"
+ ],
+ "Tennis Racket": [
+  "Sports",
+  "Tennis",
+  "Equipment",
+  "Swing",
+  "Outdoor",
+  "Strings",
+  "Grip",
+  "Recreational"
+ ],
+ "Folder": [
+  "Stationery",
+  "Office",
+  "Storage",
+  "Paper",
+  "Documents",
+  "Organizer",
+  "Portable",
+  "File"
+ ],
+ "Earphone": [
+  "Audio",
+  "Sound",
+  "Music",
+  "Device",
+  "Portable",
+  "Listening"
+ ],
+ "Mask": [
+  "Safety",
+  "Health",
+  "Protection",
+  "Face",
+  "Hygiene",
+  "Disposable",
+  "Cloth",
+  "Breathable"
+ ],
+ "Kettle": [
+  "Appliance",
+  "Kitchen",
+  "Boiling",
+  "Water",
+  "Electric",
+  "Pouring",
+  "Handle"
+ ],
+ "Tennis": [
+  "Sports",
+  "Game",
+  "Outdoor",
+  "Ball",
+  "Racket",
+  "Team",
+  "Recreational"
+ ],
+ "Swing": [
+  "Playground",
+  "Outdoor",
+  "Recreational",
+  "Seat",
+  "Rope",
+  "Motion",
+  "Hanging"
+ ],
+ "Coffee Machine": [
+  "Appliance",
+  "Kitchen",
+  "Coffee",
+  "Brewing",
+  "Electric",
+  "Hot",
+  "Beverage"
+ ],
+ "Slide": [
+  "Playground",
+  "Outdoor",
+  "Children",
+  "Recreational",
+  "Motion",
+  "Sliding",
+  "Equipment",
+  "Fun"
+ ],
+ "Carriage": [
+  "Vehicle",
+  "Transport",
+  "Wheels",
+  "Passenger",
+  "Cart",
+  "Classic",
+  "Historical"
+ ],
+ "Onion": [
+  "Vegetable",
+  "Food",
+  "Cooking",
+  "Raw",
+  "Sliced",
+  "Healthy",
+  "Spicy",
+  "Natural"
+ ],
+ "Green beans": [
+  "Vegetable",
+  "Food",
+  "Healthy",
+  "Cooking",
+  "Fresh",
+  "Natural",
+  "Nutrition",
+  "Green"
+ ],
+ "Projector": [
+  "Device",
+  "Presentation",
+  "Technology",
+  "Display",
+  "Screen",
+  "Portable",
+  "Office"
+ ],
+ "Frisbee": [
+  "Sports",
+  "Outdoor",
+  "Recreational",
+  "Flying",
+  "Disc",
+  "Plastic",
+  "Game",
+  "Throwing"
+ ],
+ "Chicken": [
+  "Meat",
+  "Food",
+  "Poultry",
+  "Cooking",
+  "Grilling",
+  "Healthy",
+  "Protein",
+  "Natural"
+ ],
+ "Printer": [
+  "Device",
+  "Office",
+  "Technology",
+  "Paper",
+  "Printing",
+  "Ink",
+  "Portable",
+  "Documents"
+ ],
+ "Watermelon": [
+  "Fruit",
+  "Food",
+  "Juicy",
+  "Sweet",
+  "Healthy",
+  "Snack"
+ ],
+ "Saxophone": [
+  "Instrument",
+  "Music",
+  "Brass",
+  "Playing",
+  "Sound",
+  "Melody"
+ ],
+ "Tissue": [
+  "Hygiene",
+  "Paper",
+  "Soft",
+  "Disposable",
+  "Bathroom",
+  "Facial",
+  "Essential",
+  "Cleaning"
+ ],
+ "Toothbrush": [
+  "Hygiene",
+  "Dental",
+  "Teeth",
+  "Cleaning",
+  "Handle",
+  "Bathroom",
+  "Portable"
+ ],
+ "Ice cream": [
+  "Food",
+  "Dessert",
+  "Sweet",
+  "Cold",
+  "Frozen",
+  "Creamy",
+  "Snack",
+  "Delicious"
+ ],
+ "Cello": [
+  "Instrument",
+  "Music",
+  "Strings",
+  "Playing",
+  "Bow",
+  "Classical",
+  "Melody",
+  "Acoustic"
+ ],
+ "French Fries": [
+  "Food",
+  "Snack",
+  "Fried",
+  "Potatoes",
+  "Crispy",
+  "Salty",
+  "Fast Food",
+  "Quick Meal",
+  "Delicious"
+ ],
+ "Scale": [
+  "Device",
+  "Weight",
+  "Measuring",
+  "Portable",
+  "Home",
+  "Accuracy"
+ ],
+ "Trophy": [
+  "Award",
+  "Recognition",
+  "Prize",
+  "Victory",
+  "Sports",
+  "Achievement",
+  "Metal",
+  "Display"
+ ],
+ "Cabbage": [
+  "Vegetable",
+  "Food",
+  "Green",
+  "Cooking",
+  "Fresh",
+  "Healthy",
+  "Leafy",
+  "Natural"
+ ],
+ "Hot dog": [
+  "Food",
+  "Snack",
+  "Sausage",
+  "Bun",
+  "Fast Food",
+  "Quick Meal",
+  "Grilled",
+  "Toppings",
+  "Delicious"
+ ],
+ "Blender": [
+  "Appliance",
+  "Kitchen",
+  "Mixing",
+  "Electric",
+  "Cooking",
+  "Food",
+  "Portable"
+ ],
+ "Peach": [
+  "Fruit",
+  "Food",
+  "Sweet",
+  "Juicy",
+  "Healthy",
+  "Snack",
+  "Natural"
+ ],
+ "Rice": [
+  "Food",
+  "Grain",
+  "Cooking",
+  "Healthy",
+  "Natural"
+ ],
+ "Wallet/Purse": [
+  "Accessory",
+  "Money",
+  "Portable",
+  "Storage",
+  "Fashion",
+  "Pocket",
+  "Cash"
+ ],
+ "Volleyball": [
+  "Sports",
+  "Ball",
+  "Game",
+  "Team",
+  "Outdoor",
+  "Indoor",
+  "Recreational"
+ ],
+ "Tape": [
+  "Stationery",
+  "Adhesive",
+  "Office",
+  "Crafts",
+  "Sticky",
+  "Roll",
+  "Sealing",
+  "Repair"
+ ],
+ "Tablet": [
+  "Device",
+  "Electronics",
+  "Portable",
+  "Touchscreen",
+  "Technology",
+  "Work"
+ ],
+ "Cosmetics": [
+  "Beauty",
+  "Makeup",
+  "Fashion",
+  "Personal Care"
+ ],
+ "Trumpet": [
+  "Instrument",
+  "Music",
+  "Brass",
+  "Playing",
+  "Sound",
+  "Melody",
+  "Orchestra"
+ ],
+ "Pineapple": [
+  "Fruit",
+  "Food",
+  "Tropical",
+  "Sweet",
+  "Juicy",
+  "Healthy",
+  "Snack",
+  "Natural"
+ ],
+ "Golf Ball": [
+  "Sports",
+  "Golf",
+  "Game",
+  "Equipment",
+  "White",
+  "Round",
+  "Outdoor",
+  "Recreational"
+ ],
+ "Mango": [
+  "Fruit",
+  "Food",
+  "Tropical",
+  "Sweet",
+  "Juicy",
+  "Healthy",
+  "Snack",
+  "Natural"
+ ],
+ "Key": [
+  "Accessory",
+  "Metal",
+  "Door",
+  "Lock",
+  "Security",
+  "Household",
+  "Portable",
+  "Essential"
+ ],
+ "Fishing Rod": [
+  "Sports",
+  "Outdoor",
+  "Fishing",
+  "Equipment",
+  "Recreational",
+  "Pole",
+  "Hook",
+  "Portable"
+ ],
+ "Medal": [
+  "Award",
+  "Recognition",
+  "Prize",
+  "Achievement",
+  "Sports",
+  "Victory",
+  "Metal",
+  "Display"
+ ],
+ "Flute": [
+  "Instrument",
+  "Music",
+  "Woodwind",
+  "Playing",
+  "Melody",
+  "Classical",
+  "Sound"
+ ],
+ "Brush": [
+  "Tool",
+  "Painting",
+  "Art",
+  "Cleaning",
+  "Handle",
+  "Creative",
+  "Crafts"
+ ],
+ "Megaphone": [
+  "Device",
+  "Audio",
+  "Amplification",
+  "Loudspeaker",
+  "Portable",
+  "Announcing",
+  "Sound",
+  "Broadcast"
+ ],
+ "Corn": [
+  "Vegetable",
+  "Food",
+  "Cooking",
+  "Grilling",
+  "Snack",
+  "Healthy",
+  "Natural"
+ ],
+ "Lettuce": [
+  "Vegetable",
+  "Food",
+  "Leafy",
+  "Salad",
+  "Healthy",
+  "Cooking",
+  "Fresh",
+  "Natural"
+ ],
+ "Garlic": [
+  "Vegetable",
+  "Food",
+  "Cooking",
+  "Spice",
+  "Aromatic",
+  "Healthy",
+  "Natural"
+ ],
+ "Lobster": [
+  "Animal",
+  "Crustacean",
+  "Ocean",
+  "Shellfish",
+  "Aquatic",
+  "Seafood",
+  "Nature"
+ ],
+ "Shrimp": [
+  "Animal",
+  "Marine",
+  "Ocean",
+  "Aquatic",
+  "Crustacean",
+  "Nature",
+  "Food",
+  "Small"
+ ],
+ "Toaster": [
+  "Appliance",
+  "Kitchen",
+  "Electric",
+  "Breakfast",
+  "Bread",
+  "Cooking",
+  "Portable",
+  "Heat"
+ ],
+ "Nuts": [
+  "Food",
+  "Snack",
+  "Healthy",
+  "Protein",
+  "Crunchy",
+  "Natural",
+  "Cooking",
+  "Variety"
+ ],
+ "Spring Rolls": [
+  "Food",
+  "Snack",
+  "Asian Cuisine",
+  "Fried",
+  "Vegetables",
+  "Crispy",
+  "Delicious",
+  "Appetizer",
+  "Cuisine"
+ ],
+ "Sushi": [
+  "Food",
+  "Japanese Cuisine",
+  "Rice",
+  "Seaweed",
+  "Fish",
+  "Healthy",
+  "Delicious",
+  "Cuisine"
+ ],
+ "Eggplant": [
+  "Vegetable",
+  "Food",
+  "Cooking",
+  "Purple",
+  "Healthy",
+  "Natural",
+  "Fresh",
+  "Nutrition"
+ ],
+ "Asparagus": [
+  "Vegetable",
+  "Food",
+  "Cooking",
+  "Healthy",
+  "Green",
+  "Natural",
+  "Fresh",
+  "Nutrition"
+ ],
+ "Mop": [
+  "Cleaning",
+  "Tool",
+  "Household",
+  "Wet",
+  "Handle",
+  "Portable",
+  "Hygiene"
+ ],
+ "Electric Drill": [
+  "Tool",
+  "Power",
+  "DIY",
+  "Construction",
+  "Electric",
+  "Portable",
+  "Drilling",
+  "Handheld"
+ ],
+ "Durian": [
+  "Fruit",
+  "Food",
+  "Tropical",
+  "Strong Smell",
+  "Spiky",
+  "Sweet",
+  "Snack",
+  "Unique"
+ ],
+ "Grapefruit": [
+  "Fruit",
+  "Food",
+  "Citrus",
+  "Healthy",
+  "Juicy",
+  "Snack",
+  "Vitamin C"
+ ],
+ "Calculator": [
+  "Device",
+  "Electronics",
+  "Mathematics",
+  "Math",
+  "Calculate",
+  "Portable",
+  "Office",
+  "School",
+  "Display"
+ ],
+ "Broom": [
+  "Cleaning",
+  "Tool",
+  "Household",
+  "Sweeping",
+  "Handle",
+  "Portable",
+  "Hygiene"
+ ],
+ "Soap": [
+  "Hygiene",
+  "Cleaning",
+  "Bathroom",
+  "Lather",
+  "Handwashing",
+  "Sanitation"
+ ],
+ "Hair Dryer": [
+  "Appliance",
+  "Beauty",
+  "Haircare",
+  "Electric",
+  "Drying",
+  "Portable",
+  "Hot Air",
+  "Bathroom"
+ ],
+ "Sandwich": [
+  "Food",
+  "Snack",
+  "Bread",
+  "Filling",
+  "Lunch",
+  "Portable",
+  "Delicious",
+  "Quick Meal"
+ ],
+ "Cherry": [
+  "Fruit",
+  "Food",
+  "Red",
+  "Sweet",
+  "Juicy",
+  "Healthy",
+  "Snack",
+  "Natural"
+ ],
+ "Tuba": [
+  "Instrument",
+  "Music",
+  "Brass",
+  "Playing",
+  "Orchestra",
+  "Sound",
+  "Melody",
+  "Classical"
+ ],
+ "Poker Card": [
+  "Game",
+  "Playing",
+  "Cards",
+  "Casino",
+  "Deck",
+  "Shuffling",
+  "Entertainment",
+  "Strategy"
+ ],
+ "Noodles": [
+  "Food",
+  "Snack",
+  "Cooking",
+  "Boiled",
+  "Delicious",
+  "Quick Meal",
+  "Variety"
+ ],
+ "Stapler": [
+  "Tool",
+  "Office",
+  "Stationery",
+  "Paper",
+  "Binding",
+  "Metal",
+  "Portable",
+  "Desk"
+ ],
+ "Hoverboard": [
+  "Device",
+  "Transportation",
+  "Electric",
+  "Portable",
+  "Balance",
+  "Recreational",
+  "Wheels",
+  "Modern"
+ ],
+ "Dumbbell": [
+  "Fitness",
+  "Exercise",
+  "Gym",
+  "Weights",
+  "Portable",
+  "Strength",
+  "Training",
+  "Equipment"
+ ],
+ "Table Tennis paddle": [
+  "Sports",
+  "Equipment",
+  "Table Tennis",
+  "Paddle",
+  "Racket",
+  "Handle",
+  "Recreational",
+  "Indoor",
+  "Grip"
+ ],
+ "Cue": [
+  "Sports",
+  "Billiards",
+  "Snooker",
+  "Equipment",
+  "Stick",
+  "Recreational",
+  "Precision",
+  "Game"
+ ],
+ "Notepaper": [
+  "Stationery",
+  "Writing",
+  "Notes",
+  "Office",
+  "School",
+  "Paper",
+  "Portable",
+  "Desk"
+ ],
+ "Red Cabbage": [
+  "Vegetable",
+  "Food",
+  "Cooking",
+  "Healthy",
+  "Leafy",
+  "Fresh",
+  "Nutrition"
+ ],
+ "Coconut": [
+  "Fruit",
+  "Food",
+  "Tropical",
+  "Hard Shell",
+  "Water",
+  "Snack",
+  "Healthy",
+  "Natural"
+ ],
+ "Pomegranate": [
+  "Fruit",
+  "Food",
+  "Juicy",
+  "Healthy",
+  "Natural",
+  "Snack"
+ ],
+ "Avocado": [
+  "Fruit",
+  "Food",
+  "Healthy",
+  "Cooking",
+  "Green",
+  "Creamy",
+  "Snack",
+  "Natural"
+ ],
+ "Pasta": [
+  "Food",
+  "Italian",
+  "Noodles",
+  "Cooking",
+  "Delicious",
+  "Meal",
+  "Sauce",
+  "Staple"
+ ],
+ "Oyster": [
+  "Food",
+  "Seafood",
+  "Shellfish",
+  "Marine",
+  "Ocean",
+  "Cooking",
+  "Delicious",
+  "Fresh"
+ ],
+ "Dumpling": [
+  "Food",
+  "Asian Cuisine",
+  "Snack",
+  "Boiled",
+  "Fried",
+  "Steamed",
+  "Delicious",
+  "Filling"
+ ],
+ "Plum": [
+  "Fruit",
+  "Food",
+  "Juicy",
+  "Sweet",
+  "Snack",
+  "Healthy",
+  "Natural"
+ ],
+ "Goldfish": [
+  "Animal",
+  "Fish",
+  "Aquatic",
+  "Pet",
+  "Nature",
+  "Small",
+  "Orange",
+  "Freshwater"
+ ],
+ "Trombone": [
+  "Instrument",
+  "Music",
+  "Brass",
+  "Orchestra",
+  "Playing",
+  "Melody",
+  "Classical",
+  "Sound"
+ ],
+ "Table Tennis": [
+  "Sports",
+  "Indoor",
+  "Game",
+  "Racket",
+  "Ball",
+  "Recreational",
+  "Competition",
+  "Fast"
+ ],
+ "Tape Measure/Ruler": [
+  "Tool",
+  "Measuring",
+  "Length",
+  "Construction",
+  "Portable",
+  "Precision",
+  "DIY",
+  "Handy"
+ ],
+ "Globe": [
+  "Education",
+  "Geography",
+  "Earth",
+  "Map",
+  "Learning",
+  "Display",
+  "Rotating",
+  "Desk",
+  "Teaching"
+ ],
+ "Recorder": [
+  "Device",
+  "Audio",
+  "Recording",
+  "Portable",
+  "Technology",
+  "Sound",
+  "Playback",
+  "Microphone"],
+ "Board Eraser": [
+  "Tool",
+  "Classroom",
+  "Teaching",
+  "Writing",
+  "Wiping",
+  "Erasing",
+  "Cleaning",
+  "Portable"
+ ],
+ "Router/modem": [
+  "Device",
+  "Electronics",
+  "Internet",
+  "Networking",
+  "Wi-Fi",
+  "Wireless",
+  "Home",
+  "Technology",
+  "Portable"
+ ],
+ "Cosmetics Brush/Eyeliner Pencil": [
+  "Beauty",
+  "Makeup",
+  "Personal Care",
+  "Tools",
+  "Fashion",
+  "Application",
+  "Portable"
+ ],
+ "Dishwasher": [
+  "Appliance",
+  "Kitchen",
+  "Cleaning",
+  "Electric",
+  "Dishes",
+  "Household",
+  "Water",
+  "Convenient"
+ ],
+ "Rice Cooker": [
+  "Appliance",
+  "Kitchen",
+  "Cooking",
+  "Rice",
+  "Electric",
+  "Household",
+  "Food",
+  "Convenient"
+ ],
+ "Cheese": [
+  "Food",
+  "Dairy",
+  "Snack",
+  "Cooking",
+  "Milk",
+  "Delicious",
+  "Variety",
+  "Fresh"
+ ],
+ "Comb": [
+  "Tool",
+  "Personal Care",
+  "Hair",
+  "Grooming",
+  "Portable"
+ ],
+ "Screwdriver": [
+  "Tool",
+  "DIY",
+  "Construction",
+  "Handheld",
+  "Portable",
+  "Precision",
+  "Metal",
+  "Screws"
+ ],
+ "Chainsaw": [
+  "Tool",
+  "Power",
+  "Cutting",
+  "Wood",
+  "Portable",
+  "Electric",
+  "Gas",
+  "Construction"
+ ],
+ "Lighter": [
+  "Tool",
+  "Fire",
+  "Portable",
+  "Ignition",
+  "Flame",
+  "Smoking",
+  "Camping",
+  "Metal"
+ ],
+ "Lipstick": [
+  "Beauty",
+  "Makeup",
+  "Cosmetics",
+  "Lips",
+  "Fashion",
+  "Color",
+  "Portable",
+  "Personal Care"
+ ],
+ "Chips": [
+  "Food",
+  "Snack",
+  "Crispy",
+  "Potatoes",
+  "Packaged",
+  "Salty",
+  "Crunchy",
+  "Delicious"
+ ],
+ "Green Onion": [
+  "Vegetable",
+  "Food",
+  "Cooking",
+  "Fresh",
+  "Healthy",
+  "Natural",
+  "Salad",
+  "Garnish"
+ ],
+ "Mushroom": [
+  "Vegetable",
+  "Food",
+  "Cooking",
+  "Fungi",
+  "Natural",
+  "Fresh",
+  "Healthy",
+  "Savory"
+ ],
+ "Kiwi fruit": [
+  "Fruit",
+  "Food",
+  "Sweet",
+  "Juicy",
+  "Healthy",
+  "Snack",
+  "Natural"
+ ],
+ "Cosmetics Mirror": [
+  "Beauty",
+  "Tool",
+  "Portable",
+  "Reflection",
+  "Makeup",
+  "Fashion",
+  "Compact",
+  "Personal Care"
+ ],
+ "Showerhead": [
+  "Appliance",
+  "Bathroom",
+  "Water",
+  "Fixture",
+  "Plumbing",
+  "Portable",
+  "Hygiene",
+  "Adjustable"
+ ],
+ "Steak": [
+  "Food",
+  "Meat",
+  "Cooking",
+  "Beef",
+  "Grilling",
+  "Savory",
+  "Delicious",
+  "Dinner"
+ ],
+ "Binoculars": [
+  "Tool",
+  "Vision",
+  "Magnification",
+  "Outdoor",
+  "Hiking",
+  "Portable",
+  "Wildlife",
+  "Adventure",
+  "Spyglass"
+ ],
+ "Hammer": [
+  "Tool",
+  "Construction",
+  "DIY",
+  "Portable",
+  "Metal",
+  "Handle",
+  "Handheld"
+ ],
+ "Induction Cooker": [
+  "Appliance",
+  "Kitchen",
+  "Cooking",
+  "Electric",
+  "Portable",
+  "Heat",
+  "Food"
+ ],
+ "Pliers": [
+  "Tool",
+  "Grip",
+  "DIY",
+  "Construction",
+  "Metal",
+  "Portable",
+  "Cutting",
+  "Handheld"
+ ],
+ "Eraser": [
+  "Stationery",
+  "Writing",
+  "Correction",
+  "Clearing",
+  "Office",
+  "School",
+  "Portable",
+  "Rubber",
+  "Desk"
+ ],
+ "CD": [
+  "Media",
+  "Disc",
+  "Music",
+  "Storage",
+  "Portable",
+  "Technology",
+  "Entertainment",
+  "Data"
+ ],
+ "Game board": [
+  "Game",
+  "Board Game",
+  "Entertainment",
+  "Strategy",
+  "Family",
+  "Indoor",
+  "Recreational",
+  "Pieces"
+ ],
+ "Pencil Case": [
+  "Stationery",
+  "Storage",
+  "Portable",
+  "School",
+  "Office",
+  "Organizer",
+  "Desk"
+ ]
+}

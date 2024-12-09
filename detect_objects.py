@@ -1,6 +1,11 @@
 import torch
 from image_processing import format_detection_results
 from commons import values as common_values
+import logging
+
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
 
 # Load the YOLOv5 pretrained model (now unused)
 def load_model():

@@ -22,9 +22,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),  # Default route to index.html
-    path('image2tag/', image2tag, name='upload_image'),
-
+    path('', index, name='index'),
+    path('image2tag/', image2tag, name='image2tag'),
 ]
 
 
