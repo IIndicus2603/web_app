@@ -65,6 +65,25 @@
             top: 3vh;
             left: 3%; 
         }
+        .drop-overlay {
+            border-radius: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: #208074;
+            color: #FFD1BE;
+            font-family: 'Monaco',Monospace;
+            font-size: 1.5rem;
+            text-align: center;
+            border: 2px dashed #FFD1BE;
+        }
         .tags-container {
             width: 33%; /* Tag container takes 35% of the space */
             height: 81.5vh;
@@ -92,12 +111,16 @@
             border-color: #00dfc4;
             color: #FFD1BE;
             cursor: pointer;
+            font-family: 'Monaco',Monospace;
+
         }
         .tag-btn:hover,.tag-add-btn:hover {
             background-color: #FFD1BE;
             font-weight: bold;
             border-color: #FFD1BE;
             color: #009B9E;
+            font-family: 'Monaco',Monospace;
+
         }
         .tag-wrapper {
             display: inline-flex;
@@ -133,7 +156,7 @@
             background-color: #27384c;
             color: #FFD1BE;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+            font-family: 'Monaco',Monospace;
             
         }
         .carousel-caption {
@@ -154,6 +177,8 @@
             transition: background-color 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-left: 1.25%;
+            font-family: 'Monaco',Monospace;
+
         }
         #resetButton {
             width:14%;
@@ -163,6 +188,8 @@
             transition: background-color 0.3s ease;
             margin-left: 2%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Monaco',Monospace;
+
         }
         #downloadTag {
             width:30%;
@@ -173,6 +200,7 @@
             transition: background-color 0.3s ease;
             color:#446b50;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Monaco',Monospace;
 
         }
         #resetButton:hover {
@@ -305,11 +333,12 @@
         #carouselImages {
             cursor: not-allowed;
         }
+
     </style>
 </head>
 <body>
 <div class="container mt-5">
-    <h2 class="text-center custom-title" style="color:#DE2C00;font-family: 'Copperplate',Fantasy;">Recommended Tags:</h2>
+    <h2 class="text-center custom-title" style="color:#DE2C00;font-family:'Copperplate',Fantasy;">Recommended Tags:</h2>
     <!-- Flex container to hold carousel and tags -->
     <div class="image-tag-container mt-4">
         <!-- Carousel as drag-and-drop area -->
@@ -321,6 +350,10 @@
                             <img src="{{ image.image.url }}" class="d-block w-100" alt="Image">
                         </div>
                     {% endfor %}
+                    <div id="dropOverlay" class="drop-overlay">
+                        <p>Drop Image to Upload</p>
+                    </div>
+                    
                     <!-- Loading Spinners -->
                     <div id="transparentOverlay"class="overlay" style="display: none;"></div>                  
                     <div id="loadingSpinner" class="load" style="display: none;"></div>
@@ -362,9 +395,9 @@
     <!-- Manual Upload, Delete All, Download Tags List Button -->
     <div class="upload-btn">
         <button class="btn btn-primary" id="uploadButton">Upload Image</button>
-        <button id="resetButton" class="btn btn-danger">Delete All</button>
+        <button id="resetButton" class="btn btn-danger">Clear All</button>
         <input type="file" id="fileInput" name="image" accept="image/*" multiple>
-        <button class="btn btn-primary" id="downloadTag">Download tags list</button>
+        <button class="btn btn-primary" id="downloadTag">Save Tag List</button>
     </div>
 </div>
 
@@ -373,7 +406,7 @@
 
     var image_tag = {};
     var mappings = {{ mappings_data | safe }};
-        
+
     // drag and drop file
     $('#carouselImages').on('dragover', function(e) {
         e.preventDefault();  // Prevent default behavior to allow dropping
@@ -419,11 +452,22 @@
         var isFirstFile = true; // Variable to track the first image
         // Filter out files that have already been uploaded
         var uploadedFiles = [];
+        var invalidFiles = [];
         // Loop through the remaining files
         for (var i = 0; i < files.length; i++) {
             const file = files[i];        
+
+            // Skip if the file is not an image
+            if (!file.type.startsWith("image/")) {
+                alert(`File "${file.name}" is not an image. Please select a valid image file.`);
+                console.log(`File "${file.name}" is not an image, skipping.`);
+                invalidFiles.push(file.name);
+                continue;
+            }
+
             // Skip if the file has already been uploaded
             if (image_tag && image_tag[file.name]) {
+                alert(`File "${file.name}" has already been uploaded.`);
                 console.log(`File "${file.name}" has already been uploaded, skipping.`);
                 uploadedFiles.push(file.name);
                 continue;
@@ -448,9 +492,8 @@
                         tagButtonsContainer.find('#addTagButton').remove(); // Remove "add tag" button
             
                         // Show loading spinner and overlay
-                        $('#transparentOverlay').show();
-                        $('#tagLoading').show();
-                        $('#loadingSpinner').show();
+                        $('#dropOverlay').hide();
+                        $('#loadingSpinner, #transparentOverlay, #tagLoading').show();
                         $('#carouselImages .carousel-item').removeClass('active'); // Remove active class from all items
                         newItem.addClass('active');
                         isFirstFile = false; // Mark that the first image has been processed
@@ -471,7 +514,7 @@
         for (var i = 0; i < files.length; i++) {
             const file = files[i];
             // Check if the file has already been uploaded (via image_tag or uploadedFiles list)
-            if (uploadedFiles.includes(file.name)) {
+            if (uploadedFiles.includes(file.name) || invalidFiles.includes(file.name)) {
                 continue; // Skip to the next file
             }
             try {
@@ -486,11 +529,6 @@
     // Upload an image and process tags
     function uploadImage(file, isFirstFile) {
         return new Promise((resolve, reject) => {
-            // Check if the file is an image
-            if (!file.type.startsWith("image/")) {
-                alert("Only image files are allowed.");
-                return reject("Invalid file type");
-            }
 
             const reader = new FileReader();
             reader.onload = function (e) {
@@ -545,7 +583,7 @@
                         // Update carousel and render tags
                         imagec.attr('data-status', 'true');
                         const filename = $('#carouselImages .carousel-item.active').data('filename');
-                        if (filename && image_tag[filename]) {
+                        if (filename === file.name) {
                             $('#loadingSpinner, #transparentOverlay, #tagLoading').hide();
                             renderTagButtons(image_tag[filename]);
                         }
@@ -807,12 +845,12 @@
     // Reset all data on clicking the reset button
     $(document).ready(function() {
         $('#resetButton').on('click', function() {
-            if (confirm('Bạn có chắc chắn muốn xóa toàn bộ dữ liệu?')) { // Confirm reset action
+            if (confirm('Are you sure you want to clear all data?')) { // Confirm reset action
                 // Reload the page to reset data
                 location.reload();
             }
         });
-    });
+    });    
 
     // Download tags list for the current image
     $('#downloadTag').on('click', function() {
