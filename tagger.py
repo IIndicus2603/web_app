@@ -6,6 +6,7 @@ import os
 import base64
 from io import BytesIO
 import PIL
+from PIL import  ImageOps
 import logging
 
 
@@ -15,7 +16,6 @@ logging.basicConfig(level=logging.INFO)
 # Train and save the custom YOLOv5 model
 def train_and_save_model(config_path, epochs=35):
     train_custom_yolov5(config_path, epochs=epochs)
-
 
 # Save detection results to a JSON file
 def save_detections_to_json(detections, output_path):
@@ -27,13 +27,12 @@ def save_detections_to_json(detections, output_path):
         logger.error(f"Error saving detections to JSON: {e}", exc_info=True)
 
 # Use the trained model to predict and return a list of qualified labels
-def predict_and_list_labels(imgstr, image_name, model_path='ai_capstone.pt', confidence=0.6, boxes_dir="boxes"):
+def predict_and_list_labels(imgstr, image_name,model, confidence=0.6, boxes_dir="boxes"):
     try:
-        model = load_custom_trained_model(model_path)
         
         # Load image from base64 string
         image = PIL.Image.open(BytesIO(base64.b64decode(imgstr)))
-        
+
         # Detect objects
         results = detect_objects(model, image)
         
