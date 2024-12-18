@@ -25,6 +25,23 @@ def save_detections_to_json(detections, output_path):
             json.dump(detections, f, indent=4)
     except Exception as e:
         logger.error(f"Error saving detections to JSON: {e}", exc_info=True)
+        
+def resize_with_padding(image, target_size=(640, 640)):
+    old_width, old_height = image.size
+    target_width, target_height = target_size
+
+    # Scale and preserve aspect ratio
+    ratio = min(target_width / old_width, target_height / old_height)
+    new_width, new_height = int(old_width * ratio), int(old_height * ratio)
+    image = image.resize((new_width, new_height), PIL.Image.LANCZOS)
+
+    # Create new image with padding
+    new_image = PIL.Image.new("RGB", target_size, (0, 0, 0))
+    paste_x = (target_width - new_width) // 2
+    paste_y = (target_height - new_height) // 2
+    new_image.paste(image, (paste_x, paste_y))
+
+    return new_image
 
 # Use the trained model to predict and return a list of qualified labels
 def predict_and_list_labels(imgstr, image_name,model, confidence=0.6, boxes_dir="boxes"):
@@ -32,6 +49,13 @@ def predict_and_list_labels(imgstr, image_name,model, confidence=0.6, boxes_dir=
         
         # Load image from base64 string
         image = PIL.Image.open(BytesIO(base64.b64decode(imgstr)))
+
+        # Applies a sharpening filter
+        image = image.filter(PIL.ImageFilter.SHARPEN)
+
+        # Resize image
+        input_width, input_height = 640, 640
+        image = resize_with_padding(image, (input_width, input_height))
 
         # Detect objects
         results = detect_objects(model, image)

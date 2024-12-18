@@ -405,7 +405,6 @@
 <script>
 
     var image_tag = {};
-    var mappings = {{ mappings_data | safe }};
 
     // drag and drop file
     $('#carouselImages').on('dragover', function(e) {
@@ -479,7 +478,7 @@
                     const base64Image = e.target.result;
                     // Create the carousel item for the image
                     const newItem = $(`
-                        <div class="carousel-item" data-filename="${file.name}" data-status="false">
+                        <div class="carousel-item" data-filename="${file.name}">
                             <img src="${base64Image}" class="d-block w-100" alt="Uploaded Image">
                         </div>
                     `);
@@ -552,36 +551,13 @@
                     type: 'POST',
                     data: JSON.stringify({ image: base64Image, fileName: file.name }),
                     contentType: 'application/json',
-                    success: function (response) {
+                    success: function (response) { 
+    
                         // Store tags and handle synonyms
                         image_tag[file.name] = response.tags;
-                        let synonymous_tag = new Set();
-
-                        // Add synonymous tags from mappings
-                        response.tags.forEach(tag => {
-                            if (mappings[tag]) {
-                                mappings[tag].forEach(synTag => synonymous_tag.add(synTag));
-                            }
-                        });
-
-                        // Split tags with "/" and add them separately
-                        image_tag[file.name] = response.tags.flatMap(tag =>
-                            tag.includes("/") ? tag.split("/").map(part => part.trim()) : tag
-                        );
-
-                        // Limit total tags to 28-32 by removing excess tags
-                        let maxTags = Math.floor(Math.random() * 5) + 28;
-                        let totalTags = image_tag[file.name].length + synonymous_tag.size;
-                        if (totalTags > maxTags) {
-                            synonymous_tag = new Set(Array.from(synonymous_tag).slice(0, maxTags - image_tag[file.name].length));
-                        }
-
-                        // Add synonymous tags to the main list
-                        image_tag[file.name].push(...synonymous_tag);
                         console.log(image_tag[file.name]);
 
                         // Update carousel and render tags
-                        imagec.attr('data-status', 'true');
                         const filename = $('#carouselImages .carousel-item.active').data('filename');
                         if (filename === file.name) {
                             $('#loadingSpinner, #transparentOverlay, #tagLoading').hide();
@@ -639,7 +615,7 @@
             whiteSpace: 'pre'           // Preserve spaces
         });
 
-        $('body').append(tempSpan);      // Add span to DOM for measurement
+        $('body').append(tempSpan);      // Add span for measurement
         var width = tempSpan.width();    // Measure the width of the span
         tempSpan.remove();               // Remove the temporary span
         
